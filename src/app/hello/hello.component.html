@@ -1,5 +1,17 @@
+<!-- <p *ngIf="!greeting; else showGreeting"> Enter a greeting inside the text box. </p>
+<ng-template #showGreeting>
+    <p>You've added a greeting to the text box.</p>
+</ng-template>
+
 <p>
-    {{ greeting.toUpperCase() }}
+    {{ greeting }}
 </p>
 
-<input type="text" (keyup)="log($event)">
+<input type="text" [(ngModel)]="greeting" (keyup)="log($event)"> -->
+<!--
+<div>
+    <ul>
+        <li *ngFor="let person of people">{{person.name}}</li>
+    </ul>
+</div> -->
+<app-greeting *ngFor="let person of people" [person]="person"> </app-greeting>
