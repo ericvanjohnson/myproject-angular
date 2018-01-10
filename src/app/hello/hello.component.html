@@ -14,4 +14,7 @@
         <li *ngFor="let person of people">{{person.name}}</li>
     </ul>
 </div> -->
+
+<input type="text" [(ngModel)]="personName">
+<button (click)="addPerson(personName)"></button>
 <app-greeting *ngFor="let person of people" [person]="person"> </app-greeting>
